@@ -17,7 +17,7 @@ body {
   max-width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Make inputs full width of container */
+  align-items: stretch;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -30,18 +30,18 @@ body {
 .login-container form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* space between inputs and button */
+  gap: 15px;
 }
 
 input[type="text"], input[type="password"] {
-  width: 100%; /* ensures full width */
+  width: 100%;
   padding: 12px 15px;
   border-radius: 12px;
   border: 1px solid #ccc;
   outline: none;
   transition: all 0.3s ease;
   font-size: 16px;
-  box-sizing: border-box; /* prevents padding from breaking width */
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -49,8 +49,32 @@ input:focus {
   box-shadow: 0 0 5px #74ebd5;
 }
 
+/* invalid input styling */
+input.invalid {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 6px rgba(255,107,107,0.3);
+}
+
+/* error message: default hidden, show with .show */
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  min-height: 22px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-4px);
+}
+
+/* visible state */
+.error-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* button */
 button {
-  width: 100%; /* ensures button aligns with inputs */
+  width: 100%;
   padding: 14px;
   background: #74ebd5;
   border: none;
@@ -72,6 +96,7 @@ button:hover {
   from {opacity: 0; transform: translateY(-20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+
 .options {
   display: flex;
   justify-content: space-between;
@@ -79,15 +104,7 @@ button:hover {
   font-size: 0.9em;
 }
 
-.error-message {
-  color: red;
-  font-size: 0.9em;
-  margin-bottom: 10px;
-  min-height: 20px;
-  transition: all 0.3s ease;
-}
-/* Dashboard Enhancements */
-
+/* Dashboard & other styles kept unchanged */
 .welcome-text {
   margin-bottom: 25px;
   color: #555;
