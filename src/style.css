@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  width: 360px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Make inputs full width of container */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-container h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* space between inputs and button */
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%; /* ensures full width */
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  box-sizing: border-box; /* prevents padding from breaking width */
+}
+
+input:focus {
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px #74ebd5;
+}
+
+button {
+  width: 100%; /* ensures button aligns with inputs */
+  padding: 14px;
+  background: #74ebd5;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ACB6E5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  min-height: 20px;
+  transition: all 0.3s ease;
+}
