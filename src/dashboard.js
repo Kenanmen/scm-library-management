@@ -54,6 +54,32 @@ pageContainer.appendChild(booksList);
   ROOT.appendChild(pageContainer);
 })();
 
+// Theme toggle: small sun/moon button that persists preference
+const themeToggle = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+  document.body.classList.toggle('dark-mode', theme === 'dark');
+  document.body.classList.toggle('light-mode', theme === 'light');
+  if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☾' : '☀';
+}
+
+function initialTheme() {
+  const saved = localStorage.getItem('theme');
+  if (saved) return saved;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function toggleTheme() {
+  const current = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  localStorage.setItem('theme', next);
+}
+
+// apply theme now and wire the button
+applyTheme(initialTheme());
+themeToggle?.addEventListener('click', toggleTheme);
+
 // Data helpers
 async function loadBooks() {
   let books = null;

@@ -136,3 +136,89 @@ button:hover {
   width: 100%;
   margin: 8px 0;
 }
+
+/* make dashboard container positionable for the toggle */
+.dashboard-container {
+  position: relative;
+  padding: 28px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Theme variables */
+:root {
+  --bg-start: #74ebd5;
+  --bg-end: #ACB6E5;
+  --text-color: #222;
+  --panel-bg: rgba(255,255,255,0.9);
+  --btn-bg: #74ebd5;
+  --btn-hover: #ACB6E5;
+  --muted: #666;
+}
+
+body.light-mode {
+  --bg-start: #74ebd5;
+  --bg-end: #ACB6E5;
+  --text-color: #222;
+  --panel-bg: rgba(255,255,255,0.95);
+  --btn-bg: #74ebd5;
+  --btn-hover: #ACB6E5;
+  --muted: #666;
+}
+
+body.dark-mode {
+  --bg-start: #0f1724;
+  --bg-end: #102a43;
+  --text-color: #e6eef6;
+  --panel-bg: rgba(10,16,24,0.7);
+  --btn-bg: #1e90ff;
+  --btn-hover: #4aa3ff;
+  --muted: #9fb3c8;
+}
+
+/* Use variables */
+body {
+  background: linear-gradient(to right, var(--bg-start), var(--bg-end));
+  color: var(--text-color);
+}
+
+/* dashboard container override for panels */
+.dashboard-container {
+  background: var(--panel-bg);
+  color: var(--text-color);
+}
+
+/* button colors use variables */
+button {
+  background: var(--btn-bg);
+}
+button:hover {
+  background: var(--btn-hover);
+}
+
+/* theme toggle button */
+.theme-toggle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.12);
+  color: var(--text-color);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.theme-toggle:hover { transform: scale(1.05); background: rgba(255,255,255,0.18); }
+
+/* ensure smaller screens look ok */
+@media (max-width: 480px) {
+  .theme-toggle { top: 10px; right: 10px; width:36px; height:36px; font-size:16px; }
+}
