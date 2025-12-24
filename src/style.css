@@ -86,3 +86,36 @@ button:hover {
   min-height: 20px;
   transition: all 0.3s ease;
 }
+/* Dashboard Enhancements */
+
+.welcome-text {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.logout-btn {
+  background: #ff6b6b;
+}
+
+.logout-btn:hover {
+  background: #ff8787;
+}
+.section {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.section input {
+  width: 100%;
+  margin: 8px 0;
+}

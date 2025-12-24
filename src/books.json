@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "issued": false
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen et al.",
+    "issued": false
+  },
+  {
+    "id": 3,
+    "title": "Design Patterns",
+    "author": "Erich Gamma et al.",
+    "issued": false
+  },
+  {
+    "id": 4,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "issued": false
+  },
+  {
+    "id": 5,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt & David Thomas",
+    "issued": false
+  },
+  {
+    "id": 6,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "issued": false
+  },
+  {
+    "id": 7,
+    "title": "Operating System Concepts",
+    "author": "Silberschatz, Galvin, Gagne",
+    "issued": false
+  },
+  {
+    "id": 8,
+    "title": "Computer Networks",
+    "author": "Andrew S. Tanenbaum",
+    "issued": false
+  },
+  {
+    "id": 9,
+    "title": "Database System Concepts",
+    "author": "Abraham Silberschatz",
+    "issued": false
+  },
+  {
+    "id": 10,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell & Peter Norvig",
+    "issued": false
+  }
+]
